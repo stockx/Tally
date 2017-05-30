@@ -1,0 +1,22 @@
+{
+  "name": "Tally",
+  "version": "0.1.0",
+  "summary": "A short description of Tally.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Laurent Shala/Tally",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Laurent Shala": "laurentshala@icloud.com"
+  },
+  "source": {
+    "git": "https://github.com/Laurent Shala/Tally.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Tally/Classes/**/*"
+}
