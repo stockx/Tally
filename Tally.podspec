@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = "Tally"
-s.version          = "0.5.0"
+s.version          = "0.5.1"
 s.summary          = "Simple framework do events based on the number of times user has open the application"
 s.homepage         = 'https://github.com/stockx/Tally'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
