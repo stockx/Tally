@@ -54,7 +54,7 @@ If you prefer not to use CocoaPods, you can integrate `Tally` into your project 
 
 <a name="supported-versions"> Supported OS & SDK Versions </a>
 -----------------------------
-* Supported build target - iOS 8.0+ (Xcode 8.3.2+)
+* Supported build target - iOS 8.0+
 
 <a name="usage"> Usage </a>
 --------------
