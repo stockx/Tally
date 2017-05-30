@@ -1,6 +1,6 @@
 # Tally
 
-[![CI Status](http://img.shields.io/travis/Laurent Shala/Tally.svg?style=flat)](https://travis-ci.org/Laurent Shala/Tally)
+[![CI Status](http://img.shields.io/travis/Laurent Shala/Tally.svg?style=flat)](https://github.com/stockx/Tally.git)
 [![Version](https://img.shields.io/cocoapods/v/Tally.svg?style=flat)](http://cocoapods.org/pods/Tally)
 [![License](https://img.shields.io/cocoapods/l/Tally.svg?style=flat)](http://cocoapods.org/pods/Tally)
 [![Platform](https://img.shields.io/cocoapods/p/Tally.svg?style=flat)](http://cocoapods.org/pods/Tally)
@@ -51,23 +51,37 @@ $ pod install
 
 If you prefer not to use CocoaPods, you can integrate `Tally` into your project manually.
 
+
 <a name="supported-versions"> Supported OS & SDK Versions </a>
 -----------------------------
-
 * Supported build target - iOS 8.0+ (Xcode 8.3.2+)
 
 <a name="usage"> Usage </a>
 --------------
+#### Using tally is very simple.
+**First:** import the pod
+```swift
+import Tally
+```
+**Second:** add the following snippet to `application(:didFinishLaunchingWithOptions:)` in your AppDelegate
+```swift
+Tally.applicationOpened()
+```
 
+**Third:** When you want to check for a certain threshold of app launches, use
+```swift
+if Tally.appHasLaunched(numberOfTimes: 3) {
+    // Do anything your heart desires
+}
+```
 
 <a name="license"> License </a>
 --------------
 
 `Tally` is developed by [Laurent Shala](https://www.linkedin.com/in/laurentshala) at [StockX](https://stockx.com) and is released under the MIT license. See the `LICENSE` file for details.
 
+
 <a name="contact"> Contact </a>
 --------------
 
 Feel free to follow me on [my personal Twitter account](https://twitter.com/laurentshala). If you find any problems with the project or have ideas to enhance it, feel free to open a GitHub issue and/or create a pull request.
-
-
