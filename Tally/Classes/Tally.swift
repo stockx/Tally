@@ -34,7 +34,7 @@ public class Tally {
     public static func numberOfAppOpens() -> Int {
         return UserDefaults.standard.integer(forKey: numberOfAppOpensKey)
     }
-
+    
     /**
      Checks to see if the application has launched at least the number
      of times specified
@@ -44,5 +44,10 @@ public class Tally {
      */
     public static func hasAppOpened(numberOfTimes times: UInt) -> Bool {
         return numberOfAppOpens() >= Int(times)
+    }
+    
+    /** Will set the number of app opens on record to 0 */
+    public static func resetNumberOfAppOpens() {
+        UserDefaults.standard.set(0, forKey: numberOfAppOpensKey)
     }
 }
