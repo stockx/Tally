@@ -1,7 +1,7 @@
 {
   "name": "Tally",
-  "version": "0.5.1",
-  "summary": "Simple framework do events based on the number of times user has open the application",
+  "version": "1.0.1",
+  "summary": "Tally is a simple framework that checks how many times the user has opened the application",
   "homepage": "https://github.com/stockx/Tally",
   "license": {
     "type": "MIT",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/stockx/Tally.git",
-    "tag": "0.5.1"
+    "tag": "1.0.1"
   },
   "source_files": "Tally/Classes/**/*",
   "description": "Tally is used to check how many times the user has opened the application using a\nsimple `if` statement. This adds a lot of flexability on when you want something to happen.\nWant to fire off an alert after the 15th opening? Easy."

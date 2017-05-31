@@ -63,14 +63,14 @@ If you prefer not to use CocoaPods, you can integrate `Tally` into your project 
 ```swift
 import Tally
 ```
-**Second:** add the following snippet to `application(:didFinishLaunchingWithOptions:)` in your AppDelegate
+**Second:** add the following snippet to `application(_:didFinishLaunchingWithOptions:)` in your AppDelegate
 ```swift
-Tally.applicationOpened()
+Tally.didOpenApplication()
 ```
 
 **Third:** When you want to check for a certain threshold of app launches, use
 ```swift
-if Tally.appHasLaunched(numberOfTimes: 3) {
+if Tally.hasOpenedApp(numberOfTimes: 3) {
     // Do anything your heart desires
 }
 ```
