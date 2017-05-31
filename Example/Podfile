@@ -1,3 +1,4 @@
+platform :ios, '8.2'
 use_frameworks!
 
 target 'Tally_Example' do

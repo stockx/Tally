@@ -1,7 +1,7 @@
 PODS:
   - Nimble (5.1.1)
   - Quick (1.0.0)
-  - Tally (0.1.0)
+  - Tally (0.5.1)
 
 DEPENDENCIES:
   - Nimble (~> 5.1.1)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  Tally: 80843802786d1b88124fae68a2e6d849444e21cf
+  Tally: a036ab1438d3b2410ae4960e8d1987e6ebb55c92
 
 PODFILE CHECKSUM: f749d30faae5acd5f848f3566d5e21ea5f3725b6
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
