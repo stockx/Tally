@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let times = Tally.numberOfAppLaunches() == 1 ? "time" : "times"
-        label.text = "App did launch \(Tally.numberOfAppLaunches()) \(times)"
+        let times = Tally.numberOfAppOpens() == 1 ? "time" : "times"
+        label.text = "App did launch \(Tally.numberOfAppOpens()) \(times)"
         
-        if Tally.appHasLaunched(numberOfTimes: 3) {
+        if Tally.hasAppOpened(numberOfTimes: 3) {
             let alertController = UIAlertController(title: "Threshold reached!", message: "Do anything you want!", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Dismis", style: .cancel, handler: nil))
             present(alertController, animated: true)

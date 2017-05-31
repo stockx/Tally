@@ -12,59 +12,37 @@
  */
 public class Tally {
     
-    /** Key to access the number of launches on record (UserDefaults) */
-    private let numberOfTimesOpenedKey = "number_of_times_opened"
-    
-    /** Shared instance for the Tally (singleton) */
-    static let shared = Tally()
+    /** Key to access the number of opens on record (UserDefaults) */
+    private static let numberOfAppOpensKey = "com.stockx.ios.tally.numberOfAppOpens"
     
     /**
      Function that should be called inside the AppDelegate when you want the
-     number of launches to increment on record.
+     number of opens to increment on record.
      
      Recomended to add into application(:didFinishLaunchingWithOptions:) and
      applicationWillEnterForeground(_)
      */
-    public static func applicationOpened() {
-        shared.update()
+    public static func didOpenApplication() {
+        UserDefaults.standard.set(numberOfAppOpens() + 1, forKey: numberOfAppOpensKey)
     }
     
     /**
      The number of times that the user has launched the application
      
-     - returns: number of launches on record
+     - returns: number of opens on record
      */
-    public static func numberOfAppLaunches() -> Int {
-        return UserDefaults.standard.integer(forKey: Tally.shared.numberOfTimesOpenedKey)
+    public static func numberOfAppOpens() -> Int {
+        return UserDefaults.standard.integer(forKey: numberOfAppOpensKey)
     }
-    
-    /**
-     Initilizes the launch number on record if no value is present.
-     Otherwise, it increments the number of launches on record.
-     */
-    private func update() {
-        let numberOfTimesApplicationOpened = UserDefaults.standard.integer(forKey: Tally.shared.numberOfTimesOpenedKey)
-        
-        // If UserDefaults does not exist, 0 is returned.
-        if numberOfTimesApplicationOpened == 0 {
-            UserDefaults.standard.set(1, forKey: numberOfTimesOpenedKey)
-            return
-        }
-        UserDefaults.standard.set(numberOfTimesApplicationOpened + 1, forKey: numberOfTimesOpenedKey)
-    }
-    
+
     /**
      Checks to see if the application has launched at least the number
      of times specified
      
-     - parameter numberOfTimes: The number of launches you want before function returns true
-     - returns: true if the numberOfTimes is greater than or equal to the number of launches on record
+     - parameter times: The number of opens you want before function returns true
+     - returns: true if the numberOfTimes is greater than or equal to the number of opens on record
      */
-    public static func appHasLaunched(numberOfTimes: Int) -> Bool {
-        let numberOfTimesApplicationOpened = UserDefaults.standard.integer(forKey: Tally.shared.numberOfTimesOpenedKey)
-        if numberOfTimesApplicationOpened == 0 || numberOfTimes <= 0 {
-            return false
-        }
-        return numberOfTimesApplicationOpened >= numberOfTimes ? true : false
+    public static func hasAppOpened(numberOfTimes times: UInt) -> Bool {
+        return numberOfAppOpens() >= Int(times)
     }
 }
