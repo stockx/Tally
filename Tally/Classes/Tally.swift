@@ -11,10 +11,7 @@
  time installing the app or since time this framework is available.
  */
 public class Tally {
-    
-    /** Key to access the number of opens on record (UserDefaults) */
-    private static let numberOfAppOpensKey = "com.stockx.ios.tally.numberOfAppOpens"
-    
+
     /**
      Function that should be called inside the AppDelegate when you want the
      number of opens to increment on record.
@@ -23,7 +20,7 @@ public class Tally {
      applicationWillEnterForeground(_)
      */
     public static func didOpenApplication() {
-        UserDefaults.standard.set(numberOfAppOpens() + 1, forKey: numberOfAppOpensKey)
+        UserDefaults.standard.numberOfAppOpens += 1
     }
     
     /**
@@ -32,7 +29,7 @@ public class Tally {
      - returns: number of opens on record
      */
     public static func numberOfAppOpens() -> Int {
-        return UserDefaults.standard.integer(forKey: numberOfAppOpensKey)
+        return UserDefaults.standard.numberOfAppOpens
     }
     
     /**
@@ -48,6 +45,6 @@ public class Tally {
     
     /** Will set the number of app opens on record to 0 */
     public static func resetNumberOfAppOpens() {
-        UserDefaults.standard.set(0, forKey: numberOfAppOpensKey)
+        UserDefaults.standard.numberOfAppOpens = 0
     }
 }
