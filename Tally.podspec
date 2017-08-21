@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'Tally'
-  s.version               = '1.0.1'
+  s.version               = '1.0.2'
   s.summary               = 'Tally is a simple framework that checks how many times the user has opened the application'
   s.homepage              = 'https://github.com/stockx/Tally'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
