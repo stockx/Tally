@@ -47,4 +47,12 @@ public class Tally {
     public static func resetNumberOfAppOpens() {
         UserDefaults.standard.numberOfAppOpens = 0
     }
+    
+    /** 
+     Returns true when the app has been freshly launched for the first time 
+     (note: since adding Tally to the project). 
+     */
+    public static func isFirstLaunch() -> Bool {
+        return numberOfAppOpens <= 1
+    }
 }
