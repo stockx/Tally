@@ -54,6 +54,6 @@ public class Tally {
      (note: since adding Tally to the project). 
      */
     public static func isFirstLaunch() -> Bool {
-        return numberOfAppOpens <= 1
+        return numberOfAppOpens() <= 1
     }
 }
