@@ -24,7 +24,8 @@ public class Tally {
     }
     
     /**
-     The number of times that the user has launched the application
+     The number of times that the user has launched the application (note: since
+     adding Tally to the project).
      
      - returns: number of opens on record
      */
@@ -34,7 +35,7 @@ public class Tally {
     
     /**
      Checks to see if the application has launched at least the number
-     of times specified
+     of times specified (note: since adding Tally to the project).
      
      - parameter times: The number of opens you want before function returns true
      - returns: true if the numberOfTimes is greater than or equal to the number of opens on record
@@ -43,8 +44,16 @@ public class Tally {
         return numberOfAppOpens() >= Int(times)
     }
     
-    /** Will set the number of app opens on record to 0 */
+    /** Will set the number of app opens on record to 0. */
     public static func resetNumberOfAppOpens() {
         UserDefaults.standard.numberOfAppOpens = 0
+    }
+    
+    /** 
+     Returns true when the app has been freshly launched for the first time 
+     (note: since adding Tally to the project). 
+     */
+    public static func isFirstLaunch() -> Bool {
+        return numberOfAppOpens <= 1
     }
 }
